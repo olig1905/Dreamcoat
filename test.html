@@ -110,6 +110,7 @@
 
     var bgColor = analyser.detectBackground();
 
+    $('body').css('background-color', 'rgb(' + bgColor[0] + ', ' + bgColor[1] + ', ' + bgColor[2] + ')');
 
     var i;
     var palette = analyser.analyseImage(1, bgColor);
@@ -121,7 +122,7 @@
     var textColor = analyser.chooseTextColor(colors[0][0], colors);
     var colorString = 'rgb(' + textColor[0] + ', ' + textColor[1] + ', ' + textColor[2] + ')';
 
-    $('body').css('background-color', 'rgb(' + colors[0][0][0] + ', ' + colors[0][0][1] + ', ' + colors[0][0][2] + ')');
+    //$('body').css('background-color', 'rgb(' + colors[0][0][0] + ', ' + colors[0][0][1] + ', ' + colors[0][0][2] + ')');
     $('body').css('color', colorString);
 
 

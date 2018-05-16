@@ -117,6 +117,7 @@
     //var palette = analyser.getThresholdedPalette(0.6, 128, bgColor, 32);
 
     var colors = palette[0];
+    bgColor = colors[0][0];
     var numPixels = palette[1];
 
     var textColor = analyser.chooseTextColor(colors[0][0], colors);
@@ -124,7 +125,6 @@
 
     $('body').css('background-color', 'rgb(' + bgColor[0] + ', ' + bgColor[1] + ', ' + bgColor[2] + ')');
     $('body').css('color', colorString);
-    $('body').css('background-color', 'rgb(' + colors[0][0][0] + ', ' + colors[0][0][1] + ', ' + colors[0][0][2] + ')');
 
 
 

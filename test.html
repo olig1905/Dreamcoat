@@ -113,7 +113,7 @@
     //$('body').css('background-color', 'rgb(' + bgColor[0] + ', ' + bgColor[1] + ', ' + bgColor[2] + ')');
 
     var i;
-    var palette = analyser.analyseImage(1, bgColor);
+    var palette = analyser.analyseImage(2, bgColor);
     //var palette = analyser.getThresholdedPalette(0.6, 128, bgColor, 32);
 
     var colors = palette[0];
@@ -123,15 +123,15 @@
     var textColor = analyser.chooseTextColor(colors[0][0], colors);
     var colorString = 'rgb(' + textColor[0] + ', ' + textColor[1] + ', ' + textColor[2] + ')';
 
-    $('body').css('background-color', 'rgb(' + bgColor[0] + ', ' + bgColor[1] + ', ' + bgColor[2] + ')');
     $('body').css('color', colorString);
+    $('body').css('background-color', 'rgb(' + bgColor[0] + ', ' + bgColor[1] + ', ' + bgColor[2] + ')');
 
 
 
     $('#colors-top').empty();
     $('#colors-bottom').empty();
 
-    for (i = 0; i != colors.length; i++) {
+    for (i = 1; i != colors.length; i++) {
       var r = colors[i][0][0];
       var g = colors[i][0][1];
       var b = colors[i][0][2];
